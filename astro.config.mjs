@@ -4,7 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://immobum.com",
+  site: "https://eqvh.github.io",
+  base: "/immobum",
   vite: {
     plugins: [tailwindcss()],
   },

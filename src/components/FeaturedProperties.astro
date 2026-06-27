@@ -1,0 +1,88 @@
+---
+const properties = [
+  {
+    id: 1,
+    title: "Villa Contemporánea",
+    location: "Polanco, CDMX",
+    price: "$2,500,000 USD",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+    beds: 4,
+    baths: 4.5,
+    sqft: 450
+  },
+  {
+    id: 2,
+    title: "Penthouse Panorámico",
+    location: "Santa Fe, CDMX",
+    price: "$1,800,000 USD",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+    beds: 3,
+    baths: 3,
+    sqft: 320
+  },
+  {
+    id: 3,
+    title: "Residencia Minimalista",
+    location: "Lomas de Chapultepec",
+    price: "$3,200,000 USD",
+    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
+    beds: 5,
+    baths: 6,
+    sqft: 600
+  }
+];
+---
+<section id="propiedades" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900">Propiedades Destacadas</h2>
+        <p class="mt-4 text-zinc-500 max-w-xl">
+          Selección curada de los espacios más exclusivos y vanguardistas del mercado actual.
+        </p>
+      </div>
+      <a href="/propiedades" class="hidden md:inline-flex items-center text-sm font-medium text-zinc-900 hover:text-zinc-600 transition-colors mt-4 md:mt-0">
+        Ver todo el portafolio 
+        <svg class="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {properties.map((property) => (
+        <article class="group cursor-pointer">
+          <div class="relative w-full aspect-[4/3] overflow-hidden rounded-2xl bg-zinc-100 mb-6">
+            <img 
+              src={property.image} 
+              alt={property.title}
+              class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-zinc-900">
+              Nuevo
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-zinc-900">{property.title}</h3>
+              <p class="text-lg font-medium text-zinc-900">{property.price}</p>
+            </div>
+            <p class="text-zinc-500 text-sm mb-4">{property.location}</p>
+            <div class="flex items-center space-x-4 text-sm text-zinc-600 border-t border-zinc-100 pt-4">
+              <span class="flex items-center"><span class="font-medium text-zinc-900 mr-1">{property.beds}</span> Habs</span>
+              <span class="flex items-center"><span class="font-medium text-zinc-900 mr-1">{property.baths}</span> Baños</span>
+              <span class="flex items-center"><span class="font-medium text-zinc-900 mr-1">{property.sqft}</span> m²</span>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+    
+    <div class="mt-12 text-center md:hidden">
+      <a href="/propiedades" class="inline-flex justify-center items-center px-6 py-3 border border-zinc-200 rounded-full text-sm font-medium text-zinc-900 bg-white hover:bg-zinc-50 transition-colors w-full">
+        Ver todo el portafolio
+      </a>
+    </div>
+  </div>
+</section>

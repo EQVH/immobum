@@ -6,10 +6,17 @@
     "location": "Polanco, CDMX",
     "price": "$2,500,000 USD",
     "image": "/Images/villa_contemporanea.png",
+    "gallery": [
+      "/Images/villa_contemporanea.png",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+    ],
     "beds": 4,
     "baths": 4.5,
     "sqft": 450,
-    "featured": true
+    "featured": true,
+    "description": "Exclusiva villa contemporánea en el corazón de Polanco. Con acabados de lujo, amplios espacios abiertos que integran la luz natural y diseño arquitectónico galardonado. Ideal para quienes buscan privacidad y elegancia absoluta.",
+    "amenities": ["Seguridad 24/7", "Alberca climatizada", "Gimnasio privado", "Terraza panorámica"]
   },
   {
     "id": 2,
@@ -18,10 +25,17 @@
     "location": "Santa Fe, CDMX",
     "price": "$1,800,000 USD",
     "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+    ],
     "beds": 3,
     "baths": 3,
     "sqft": 320,
-    "featured": true
+    "featured": true,
+    "description": "Increíble Penthouse en el distrito financiero de Santa Fe. Ofrece vistas de 360 grados de la ciudad, interiorismo vanguardista y amenidades premium exclusivas para los residentes. Un espacio único en las alturas.",
+    "amenities": ["Vistas de 360°", "Elevador directo al piso", "Cava de vinos", "Helipuerto"]
   },
   {
     "id": 3,
@@ -30,9 +44,73 @@
     "location": "Cuautitlán Izcalli, Edo. Mex.",
     "price": "$4,500,000 USD",
     "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1580674684081-7764f19b20f0?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590496793907-9e4eb59074d2?auto=format&fit=crop&w=1200&q=80"
+    ],
     "beds": 0,
     "baths": 2,
     "sqft": 2500,
-    "featured": true
+    "featured": true,
+    "description": "Nave industrial AAA estratégicamente ubicada en el corredor de Cuautitlán. Diseñada para operaciones logísticas de alto rendimiento, cuenta con andenes automatizados, techo termoacústico y patio de maniobras de gran amplitud.",
+    "amenities": ["10 Andenes de carga", "Patio de maniobras 500m²", "Techo termoacústico", "Oficinas corporativas"]
+  },
+  {
+    "id": 4,
+    "title": "Casa Minimalista del Bosque",
+    "category": "residential",
+    "location": "Lomas de Chapultepec, CDMX",
+    "price": "$3,200,000 USD",
+    "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "beds": 5,
+    "baths": 6,
+    "sqft": 600,
+    "featured": false,
+    "description": "Espectacular casa inmersa en la naturaleza de las Lomas de Chapultepec. Diseño minimalista donde los interiores fluyen armónicamente hacia los jardines. Un santuario de paz dentro de la ciudad.",
+    "amenities": ["Jardín de 200m²", "Sistema Domótico", "Spa en casa", "Estacionamiento para 6 autos"]
+  },
+  {
+    "id": 5,
+    "title": "Departamento Boutique Histórico",
+    "category": "residential",
+    "location": "Roma Norte, CDMX",
+    "price": "$950,000 USD",
+    "image": "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1502672260266-1c1529392983?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "beds": 2,
+    "baths": 2,
+    "sqft": 180,
+    "featured": false,
+    "description": "Vive en una joya arquitectónica de estilo Art Déco en la colonia Roma Norte. Este departamento boutique combina detalles históricos restaurados con las comodidades de la vida moderna.",
+    "amenities": ["Techos de 4 metros", "Pisos de madera original", "Balcón clásico", "Roof garden compartido"]
+  },
+  {
+    "id": 6,
+    "title": "Bodega Comercial de Alto Tráfico",
+    "category": "industrial",
+    "location": "Vallejo, CDMX",
+    "price": "$2,100,000 USD",
+    "image": "https://images.unsplash.com/photo-1553413002-9c17eb7d383b?auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1553413002-9c17eb7d383b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "beds": 0,
+    "baths": 4,
+    "sqft": 1200,
+    "featured": false,
+    "description": "Excelente bodega industrial localizada en la emblemática zona industrial de Vallejo. Ideal para almacenamiento y distribución de última milla. Cuenta con alta seguridad y rápido acceso a vías principales.",
+    "amenities": ["Piso epóxico reforzado", "Energía trifásica", "Control de accesos automatizado", "Área de oficinas 150m²"]
   }
 ]

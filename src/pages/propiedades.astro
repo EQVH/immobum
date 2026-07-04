@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import propertiesData from '../data/properties.json';
+
+const residential = propertiesData.filter(p => p.category === 'residential');
+const industrial = propertiesData.filter(p => p.category === 'industrial');
+---
+
+<Layout title="Propiedades" description="Portafolio completo de propiedades de Immobum.">
+	<Header />
+	<main class="pt-32 pb-24 bg-white min-h-screen">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="mb-16">
+				<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 mb-4">Nuestro Portafolio</h1>
+				<p class="text-lg text-zinc-500 max-w-2xl">Descubre todas nuestras propiedades disponibles, desde espacios residenciales exclusivos hasta ubicaciones industriales estratégicas.</p>
+			</div>
+
+			<!-- Casa Habitación o Departamentos -->
+			<div class="mb-20">
+				<h2 class="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 mb-8 border-b border-zinc-100 pb-4">Casa Habitación o Departamentos</h2>
+				
+				{residential.length === 0 ? (
+					<p class="text-zinc-500">No hay propiedades residenciales disponibles por el momento.</p>
+				) : (
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						{residential.map((property) => (
+							<article class="group cursor-pointer">
+								<div class="relative w-full aspect-[4/3] overflow-hidden rounded-2xl bg-zinc-100 mb-6">
+									<img 
+										src={property.image} 
+										alt={property.title}
+										class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+										loading="lazy"
+									/>
+								</div>
+								<div>
+									<div class="flex justify-between items-start mb-2">
+										<h3 class="text-xl font-bold text-zinc-900">{property.title}</h3>
+										<p class="text-lg font-medium text-zinc-900">{property.price}</p>
+									</div>
+									<p class="text-zinc-500 text-sm mb-4">{property.location}</p>
+									<div class="flex items-center space-x-4 text-sm text-zinc-600 border-t border-zinc-100 pt-4">
+										{property.beds > 0 && <span class="flex items-center"><span class="font-medium text-zinc-900 mr-1">{property.beds}</span> Habs</span>}
+										{property.baths > 0 && <span class="flex items-center"><span class="font-medium text-zinc-900 mr-1">{property.baths}</span> Baños</span>}
+										<span class="flex items-center"><span class="font-medium text-zinc-900 mr-1">{property.sqft}</span> m²</span>
+									</div>
+								</div>
+							</article>
+						))}
+					</div>
+				)}
+			</div>
+
+			<!-- Industrial como bodegas y almacenes -->
+			<div>
+				<h2 class="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 mb-8 border-b border-zinc-100 pb-4">Industrial (Bodegas y Almacenes)</h2>
+				
+				{industrial.length === 0 ? (
+					<p class="text-zinc-500">No hay propiedades industriales disponibles por el momento.</p>
+				) : (
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						{industrial.map((property) => (
+							<article class="group cursor-pointer">
+								<div class="relative w-full aspect-[4/3] overflow-hidden rounded-2xl bg-zinc-100 mb-6">
+									<img 
+										src={property.image} 
+										alt={property.title}
+										class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+										loading="lazy"
+									/>
+								</div>
+								<div>
+									<div class="flex justify-between items-start mb-2">
+										<h3 class="text-xl font-bold text-zinc-900">{property.title}</h3>
+										<p class="text-lg font-medium text-zinc-900">{property.price}</p>
+									</div>
+									<p class="text-zinc-500 text-sm mb-4">{property.location}</p>
+									<div class="flex items-center space-x-4 text-sm text-zinc-600 border-t border-zinc-100 pt-4">
+										{property.beds > 0 && <span class="flex items-center"><span class="font-medium text-zinc-900 mr-1">{property.beds}</span> Habs</span>}
+										{property.baths > 0 && <span class="flex items-center"><span class="font-medium text-zinc-900 mr-1">{property.baths}</span> Baños</span>}
+										<span class="flex items-center"><span class="font-medium text-zinc-900 mr-1">{property.sqft}</span> m²</span>
+									</div>
+								</div>
+							</article>
+						))}
+					</div>
+				)}
+			</div>
+		</div>
+	</main>
+	<Footer />
+</Layout>

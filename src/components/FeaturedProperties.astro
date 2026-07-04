@@ -1,36 +1,7 @@
 ---
-const properties = [
-  {
-    id: 1,
-    title: "Villa Contemporánea",
-    location: "Polanco, CDMX",
-    price: "$2,500,000 USD",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
-    beds: 4,
-    baths: 4.5,
-    sqft: 450
-  },
-  {
-    id: 2,
-    title: "Penthouse Panorámico",
-    location: "Santa Fe, CDMX",
-    price: "$1,800,000 USD",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
-    beds: 3,
-    baths: 3,
-    sqft: 320
-  },
-  {
-    id: 3,
-    title: "Residencia Minimalista",
-    location: "Lomas de Chapultepec",
-    price: "$3,200,000 USD",
-    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
-    beds: 5,
-    baths: 6,
-    sqft: 600
-  }
-];
+import propertiesData from '../data/properties.json';
+
+const properties = propertiesData.filter(p => p.featured).slice(0, 3);
 ---
 <section id="propiedades" class="py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
